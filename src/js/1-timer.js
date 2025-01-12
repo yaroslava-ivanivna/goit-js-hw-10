@@ -16,6 +16,7 @@ flatpickr('#datetime-picker', {
       iziToast.error({
         title: 'Error',
         message: 'Please choose a date in the future',
+        position: 'topRight',
       });
       userSelectedDate = null;
       document.querySelector('.start-timer-btn').disabled = true;
@@ -74,10 +75,14 @@ startBtn.addEventListener('click', () => {
     const { days, hours, minutes, seconds } = convertMs(remainingTime);
 
     timerDisplay.innerHTML = `
-      <span id="days">${addLeadingZero(days)}</span>:
-      <span id="hours">${addLeadingZero(hours)}</span>:
-      <span id="minutes">${addLeadingZero(minutes)}</span>:
-      <span id="seconds">${addLeadingZero(seconds)}</span>
+    <span class="wrapper"><span id="days">${addLeadingZero(days)}</span>:
+      <span class="label">Days</span></span>
+    <span class="wrapper"> <span id="hours">${addLeadingZero(hours)}</span>:
+      <span class="label">Hours</span></span>
+    <span class="wrapper"><span id="minutes">${addLeadingZero(minutes)}</span>:
+      <span class="label">Minutes</span></span>
+    <span class="wrapper"><span id="seconds">${addLeadingZero(seconds)}</span>
+      <span class="label">Seconds</span></span>
     `;
   }, 1000);
 });

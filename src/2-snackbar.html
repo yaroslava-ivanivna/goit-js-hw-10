@@ -15,6 +15,40 @@
           <span class="main-title-gradient">Snackbar</span>
         </h1>
         <a class="back-link" href="./index.html">Go back</a>
+        <form class="form">
+          <label class="snackbar-label">
+            Delay (ms)
+            <input class="snackbar-input" type="number" name="delay" required />
+          </label>
+
+          <fieldset class="snackbar-fieldset">
+            <legend>State</legend>
+            <label class="radio-bottom-label">
+              <input
+                class="radioBtnInput radioBtnFulfilled"
+                type="radio"
+                name="state"
+                value="fulfilled"
+                required
+              />
+              Fulfilled
+            </label>
+            <label class="radio-bottom-label">
+              <input
+                class="radioBtnInput radioBtnRejected"
+                type="radio"
+                name="state"
+                value="rejected"
+                required
+              />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button class="notification-btn" type="submit">
+            Create notification
+          </button>
+        </form>
       </div>
     </main>
   </body>
