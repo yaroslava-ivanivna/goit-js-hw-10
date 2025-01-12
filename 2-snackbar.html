@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snackbar</title>
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-bYBsYhAU.css">
+    <script type="module" crossorigin src="/goit-js-hw-10/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-ldKopq5y.css">
   </head>
   <body>
     <main>
@@ -15,6 +18,40 @@
           <span class="main-title-gradient">Snackbar</span>
         </h1>
         <a class="back-link" href="./index.html">Go back</a>
+        <form class="form">
+          <label class="snackbar-label">
+            Delay (ms)
+            <input class="snackbar-input" type="number" name="delay" required />
+          </label>
+
+          <fieldset class="snackbar-fieldset">
+            <legend>State</legend>
+            <label class="radio-bottom-label">
+              <input
+                class="radioBtnInput radioBtnFulfilled"
+                type="radio"
+                name="state"
+                value="fulfilled"
+                required
+              />
+              Fulfilled
+            </label>
+            <label class="radio-bottom-label">
+              <input
+                class="radioBtnInput radioBtnRejected"
+                type="radio"
+                name="state"
+                value="rejected"
+                required
+              />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button class="notification-btn" type="submit">
+            Create notification
+          </button>
+        </form>
       </div>
     </main>
   </body>
